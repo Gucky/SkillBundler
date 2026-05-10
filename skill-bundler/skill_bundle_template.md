@@ -18,9 +18,11 @@ Read this file first. Do not load bundled Sub-Skills during discovery.
 
 When the task and project context show which capabilities are needed, load only the relevant `SUB_SKILL.md` files and whatever those selected Sub-Skills require.
 
-If routing is unclear, read `references/bundled-skills/index.json`. Do not read `references/bundled-skills/manifest.json` unless reviewing, auditing, updating, or checking source/license details.
+If routing is unclear, read `bundled-skills/index.json`. Do not read `bundled-skills/manifest.json` unless reviewing, auditing, updating, or checking source/license details.
 
 ## Dispatch Map
+
+<!-- Repeat one bullet per bundled Sub-Skill. Do not group multiple Sub-Skills into one entry. -->
 
 - `<subskill-slug>`: Use for <specific tasks or problems>. Signals: <user phrases, files, frameworks, APIs, errors, or terms>. Avoid for <near misses>.
 - `<subskill-slug>`: Use for <specific tasks or problems>. Signals: <user phrases, files, frameworks, APIs, errors, or terms>. Related: `<other-subskill-slug>` when <short reason>.
