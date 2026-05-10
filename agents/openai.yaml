@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skill Bundler"
+  short_description: "Create compact bundles of related skills."
+  default_prompt: "Use $skill-bundler to create a compact Skill Bundle from related skills using the root template."
+  icon_small: "./assets/skill-bundler.png"
+  icon_large: "./assets/skill-bundler.png"
