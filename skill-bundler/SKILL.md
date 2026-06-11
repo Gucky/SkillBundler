@@ -15,6 +15,7 @@ Create or review Skill Bundles. A Skill Bundle does not provide domain capabilit
 - Do not copy Sub-Skill content into the generated bundle `SKILL.md`.
 - Copy source skill folders whole, then rename only each copied `SKILL.md` to `SUB_SKILL.md`.
 - Preserve copied files, assets, scripts, references, notices, and licenses unless the user explicitly asks for cleanup.
+- For Git-backed source skills, record the source repository and resolved base commit in `bundled-skills/manifest.json`.
 
 ## Workflow
 
@@ -25,7 +26,7 @@ Create or review Skill Bundles. A Skill Bundle does not provide domain capabilit
 5. Rename each copied top-level `SKILL.md` to `SUB_SKILL.md`; do not leave discoverable `SKILL.md` files below `bundled-skills/`.
 6. Fill `skill_bundle_template.md` to write the generated bundle `SKILL.md`.
 7. Add a compact `bundled-skills/index.json` for runtime routing when the dispatch map is not enough.
-8. Add a `bundled-skills/manifest.json` only for review, audit, source, license, and update context.
+8. Add a `bundled-skills/manifest.json` only for review, audit, source, license, and update context. For every Git-backed source, include at least its repository URL and resolved base commit; include tag, branch, or source path when known.
 9. Validate the bundle before handing it back.
 
 ## Generated Bundle Shape
@@ -55,6 +56,7 @@ The generated dispatch map should help choose likely Sub-Skills without opening 
 - Every Sub-Skill has exactly one dispatch-map bullet.
 - `index.json` is valid JSON and points to existing `SUB_SKILL.md` files.
 - `manifest.json`, if present, is valid JSON and is not required for normal runtime use.
+- Git-backed sources in `manifest.json` include a repository URL and resolved base commit.
 - `agents/openai.yaml` exists and describes the generated bundle, not this Skill Bundler.
 - The generated bundle `SKILL.md` says to load only relevant Sub-Skills after the task need is clear.
 - The generated bundle `SKILL.md` stays compact and does not duplicate Sub-Skill instructions.
